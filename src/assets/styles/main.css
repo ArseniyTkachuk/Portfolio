@@ -1,0 +1,37 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+::-webkit-scrollbar {
+  width: 7.5px;        /* ширина вертикального скролу */
+  height: 8px;       /* висота горизонтального скролу */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);  /* фон треку */
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #565356;  /* кольор “ручки” скролу */
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #706f70; /* при наведенні */
+}
+
