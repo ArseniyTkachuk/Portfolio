@@ -21,25 +21,26 @@
             <!-- INFO -->
             <div class="contact-info">
                 <div class="info-item">
-                    <i class="devicon-github-original invert-icon"></i>
+                    <img src="https://cdn.simpleicons.org/github/08fdd8" alt="GitHub" class="social_icon" />
                     <a href="https://github.com/yourusername" target="_blank">GitHub</a>
                 </div>
 
                 <div class="info-item">
-                    <i class="devicon-linkedin-plain colored"></i>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+                    <img src="https://cdn.simpleicons.org/instagram/08fdd8" alt="Instagram" class="social_icon" />
+                    <a href="https://instagram.com/yourusername" target="_blank">Instagram</a>
                 </div>
 
                 <div class="info-item">
-                    <img src="https://cdn.simpleicons.org/telegram/08fdd8" alt="Telegram" class="tg_icon" />
-                    <a href="https://t.me/yourusername" target="_blank"> Telegram</a>
+                    <img src="https://cdn.simpleicons.org/telegram/08fdd8" alt="Telegram" class="social_icon" />
+                    <a href="https://t.me/yourusername" target="_blank">Telegram</a>
                 </div>
 
                 <div class="info-item">
-                    <i class="devicon-google-plain colored"></i>
+                    <img src="https://cdn.simpleicons.org/google/08fdd8" alt="Email" class="social_icon" />
                     <span>your.email@gmail.com</span>
                 </div>
             </div>
+
         </div>
     </section>
 </template>
@@ -142,7 +143,7 @@ export default {
     font-size: 18px;
 }
 
-.tg_icon {
+.social_icon {
     width: 28px;
     height: 28px;
 }

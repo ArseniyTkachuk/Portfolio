@@ -62,7 +62,7 @@ p {
     }
 
     .content {
-        padding: 10vh;
+        width: 45vh;
     }
 }
 </style>
