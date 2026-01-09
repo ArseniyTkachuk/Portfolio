@@ -5,7 +5,10 @@
             <h3 class="project-name">{{ project.name }}</h3>
             <p class="project-desc">{{ project.description }}</p>
             <div class="tech-icons">
-                <i v-for="tech in project.technologies" :key="tech" :class="tech"></i>
+                <i v-for="tech in project.technologies" :key="tech" :class="[
+                    tech.icon,
+                    { 'invert-icon': tech.dark }
+                ]"></i>
             </div>
             <div class="project-links">
                 <a v-if="project.demo" :href="project.demo" target="_blank">Live Demo</a>
@@ -36,7 +39,6 @@ export default {
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
 }
 
 .project-card:hover {
@@ -78,6 +80,10 @@ export default {
 .tech-icons i {
     font-size: 24px;
     transition: transform 0.3s ease;
+}
+
+.invert-icon {
+    filter: invert(1) brightness(1.2);
 }
 
 .tech-icons i:hover {

@@ -1,5 +1,12 @@
 <template>
+
     <section class="skillset">
+        <section class="about-text">
+            <p>
+                I build scalable applications with a focus on code quality, performance, and long-term maintainability.
+                I enjoy working across both frontend and backend technologies.
+            </p>
+        </section>
         <h2 class="title">
             My <span>Skillset</span>
         </h2>
@@ -37,7 +44,7 @@ export default {
                 [
                     { name: "Unity", icon: "devicon-unity-plain" },
                     { name: "C#", icon: "devicon-csharp-plain" },
-                    { name: "Express", icon: "devicon-express-original-wordmark" },
+                    { name: "Express", icon: "devicon-express-original" },
                 ],
                 [
                     { name: "PostgreSQL", icon: "devicon-postgresql-plain" },
@@ -52,6 +59,15 @@ export default {
 </script>
 
 <style scoped>
+.about-text {
+    max-width: 800px;
+    margin: 0 auto 80px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #dff;
+    text-align: center;
+}
+
 .skillset {
     padding: 90px 20px;
     text-align: center;

@@ -22,97 +22,105 @@ export default {
                     description: "My personal portfolio site built with Vue and Tailwind.",
                     image: "https://via.placeholder.com/400x200.png?text=Portfolio",
                     technologies: [
-                        "devicon-vuejs-plain colored",
-                        "devicon-css3-plain colored",
-                        "devicon-javascript-plain colored"
+                        { icon: "devicon-vuejs-plain colored" },
+                        { icon: "devicon-css3-plain colored" },
+                        { icon: "devicon-javascript-plain colored" }
                     ],
                     github: "https://github.com/yourusername/portfolio",
                     demo: "https://yourportfolio.com"
                 },
+
                 {
                     name: "Task Manager",
                     description: "A task management app built with Node.js and MongoDB.",
                     image: "https://via.placeholder.com/400x200.png?text=Task+Manager",
                     technologies: [
-                        "devicon-nodejs-plain colored",
-                        "devicon-mongodb-plain colored",
-                        "devicon-javascript-plain colored"
+                        { icon: "devicon-nodejs-plain colored" },
+                        { icon: "devicon-mongodb-plain colored" },
+                        { icon: "devicon-javascript-plain colored" }
                     ],
                     github: "https://github.com/yourusername/task-manager",
                     demo: null
                 },
+
                 {
                     name: "Game Project",
                     description: "A simple 2D platformer game built in Unity.",
                     image: "https://via.placeholder.com/400x200.png?text=Unity+Game",
                     technologies: [
-                        "devicon-unity-plain colored",
-                        "devicon-csharp-plain colored"
+                        { icon: "devicon-unity-plain colored", dark: true },
+                        { icon: "devicon-csharp-plain colored" }
                     ],
                     github: "https://github.com/yourusername/unity-game",
                     demo: null
                 },
+
                 {
                     name: "Blog App",
                     description: "A full-stack blog application using Express and PostgreSQL.",
                     image: "https://via.placeholder.com/400x200.png?text=Blog+App",
                     technologies: [
-                        "devicon-express-plain-wordmark",
-                        "devicon-postgresql-plain colored",
-                        "devicon-nodejs-plain colored"
+                        { icon: "devicon-express-original ", dark: true },
+                        { icon: "devicon-postgresql-plain colored" },
+                        { icon: "devicon-nodejs-plain colored" }
                     ],
                     github: "https://github.com/yourusername/blog-app",
                     demo: null
                 },
+
                 {
                     name: "E-commerce Store",
                     description: "Online shop built with React and Firebase.",
                     image: "https://via.placeholder.com/400x200.png?text=E-commerce",
                     technologies: [
-                        "devicon-react-plain colored",
-                        "devicon-firebase-plain colored",
-                        "devicon-css3-plain colored"
+                        { icon: "devicon-react-plain colored" },
+                        { icon: "devicon-firebase-plain colored" },
+                        { icon: "devicon-css3-plain colored" }
                     ],
                     github: "https://github.com/yourusername/ecommerce-store",
                     demo: "https://myecommercestore.com"
                 },
+
                 {
                     name: "Weather App",
                     description: "A weather forecast app using JavaScript and OpenWeather API.",
                     image: "https://via.placeholder.com/400x200.png?text=Weather+App",
                     technologies: [
-                        "devicon-javascript-plain colored",
-                        "devicon-html5-plain colored",
-                        "devicon-css3-plain colored"
+                        { icon: "devicon-javascript-plain colored" },
+                        { icon: "devicon-html5-plain colored" },
+                        { icon: "devicon-css3-plain colored" }
                     ],
                     github: "https://github.com/yourusername/weather-app",
                     demo: "https://weatherappdemo.com"
                 },
+
                 {
                     name: "Chat App",
                     description: "Real-time chat application with Node.js and Socket.IO.",
                     image: "https://via.placeholder.com/400x200.png?text=Chat+App",
                     technologies: [
-                        "devicon-nodejs-plain colored",
-                        "devicon-javascript-plain colored",
-                        "devicon-html5-plain colored"
+                        { icon: "devicon-nodejs-plain colored" },
+                        { icon: "devicon-javascript-plain colored" },
+                        { icon: "devicon-html5-plain colored" }
                     ],
                     github: "https://github.com/yourusername/chat-app",
                     demo: null
                 },
+
                 {
                     name: "Docker Portfolio",
                     description: "My projects containerized using Docker and Docker Compose.",
                     image: "https://via.placeholder.com/400x200.png?text=Docker+Portfolio",
                     technologies: [
-                        "devicon-docker-plain colored",
-                        "devicon-git-plain colored",
-                        "devicon-linux-plain colored"
+                        { icon: "devicon-docker-plain colored" },
+                        { icon: "devicon-git-plain colored" },
+                        { icon: "devicon-linux-plain ", dark: true }
                     ],
                     github: "https://github.com/yourusername/docker-portfolio",
                     demo: null
                 }
             ]
+
 
         };
     }

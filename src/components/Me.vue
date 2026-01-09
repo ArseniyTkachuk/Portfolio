@@ -90,36 +90,14 @@ export default {
     z-index: 9999;
 
     background: radial-gradient(circle at center,
-            rgba(3, 255, 226, 0.03) 0%,
+            rgba(3, 255, 226, 0.05) 0%,
             rgba(0, 255, 225, 0) 75%);
 }
 
 .conteiner {
     padding: 10vh;
     text-align: center;
-
-    background: linear-gradient(135deg, #313131, #000000, #1d2d2a);
-    background-size: 300% 300%;
-    animation: gradientMove 10s ease infinite;
 }
-
-
-/* Анімація градієнта */
-@keyframes gradientMove {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-
 
 .avatar {
     width: 200px;
