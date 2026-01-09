@@ -114,10 +114,6 @@ export default {
 
 }
 
-.avatar:hover {
-    transform: scale(1.05);
-}
-
 
 .name {
     margin-top: 10vh;

@@ -24,7 +24,9 @@ export default {
                     technologies: [
                         { icon: "devicon-vuejs-plain colored" },
                         { icon: "devicon-css3-plain colored" },
-                        { icon: "devicon-javascript-plain colored" }
+                        { icon: "devicon-html5-plain colored" },
+                        { icon: "devicon-javascript-plain colored" },
+
                     ],
                     github: "https://github.com/yourusername/portfolio",
                     demo: "https://yourportfolio.com"
