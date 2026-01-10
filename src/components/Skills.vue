@@ -3,12 +3,11 @@
     <section class="skillset">
         <section class="about-text">
             <p>
-                I build scalable applications with a focus on code quality, performance, and long-term maintainability.
-                I enjoy working across both frontend and backend technologies.
+                {{ $t("about.description") }}
             </p>
         </section>
         <h2 class="title">
-            My <span>Skillset</span>
+            {{ $t("about.skills.part1") }}<span>{{ $t("about.skills.part2") }}</span>
         </h2>
 
         <div class="rows">

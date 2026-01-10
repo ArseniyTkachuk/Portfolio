@@ -3,7 +3,11 @@
         <img :src="project.image" :alt="project.name" class="project-img" />
         <div class="project-info">
             <h3 class="project-name">{{ project.name }}</h3>
-            <p class="project-desc">{{ project.description }}</p>
+            <p class="project-desc">
+                {{ project.description[$i18n.locale] }}
+            </p>
+
+
             <div class="tech-icons">
                 <i v-for="tech in project.technologies" :key="tech" :class="[
                     tech.icon,
@@ -11,7 +15,7 @@
                 ]"></i>
             </div>
             <div class="project-links">
-                <a v-if="project.demo" :href="project.demo" target="_blank">Live Demo</a>
+                <a v-if="project.demo" :href="project.demo" target="_blank">Demo</a>
                 <a v-if="project.github" :href="project.github" target="_blank">GitHub</a>
             </div>
         </div>

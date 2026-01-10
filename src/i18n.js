@@ -8,6 +8,18 @@ const messages = {
             projects: "Projects",
             contact: "Contact",
         },
+        footer: {
+            title: {
+                part1: "You can ",
+                part2: "Find",
+                part3: " Me On"
+            },
+            text: {
+                part1: "Feel free to ",
+                part2: "connect",
+                part3: " with me"
+            }
+        },
         me: {
             fullName: "Arsenii Tkachuk",
             talk: "Let's Talk",
@@ -39,6 +51,15 @@ const messages = {
                     part3: " and other."
                 }
             }
+        },
+        about: {
+            description: "I build scalable applications with a focus on code quality, \
+            performance, and long-term maintainability. I enjoy working across \
+            both frontend and backend technologies.",
+            skills: {
+                part1: "My ",
+                part2: "Skillset"
+            }
         }
     },
     ua: {
@@ -47,6 +68,18 @@ const messages = {
             about: "Про мене",
             projects: "Проєкти",
             contact: "Контакти",
+        },
+        footer: {
+            title: {
+                part1: "Ви можете ",
+                part2: "Знайти",
+                part3: " Мене Тут"
+            },
+            text: {
+                part1: "Не соромтеся ",
+                part2: "зв'язатися",
+                part3: " зі мною"
+            }
         },
         me: {
             fullName: "Арсеній Ткачук",
@@ -79,6 +112,16 @@ const messages = {
                     part2: " та сучасних фреймворків, таких як ",
                     part3: " та інших."
                 }
+            }
+        },
+        about: {
+            description: "Я розробляю масштабовані застосунки, \
+            приділяючи особливу увагу якості коду, швидкодії та \
+            довгостроковій підтримці. Мені комфортно працювати як із \
+            фронтенд-, так і з бекенд-технологіями.",
+            skills: {
+                part1: "Мої ",
+                part2: "Навички"
             }
         }
     },

@@ -1,8 +1,10 @@
 <template>
     <div class="conteiner">
         <div class="content">
-            <h1>You can <span class="select">Find</span> Me On</h1>
-            <p>Feel free to <span class="select">connect</span> with me</p>
+            <h1>{{ $t("footer.title.part1") }}<span class="select">{{ $t("footer.title.part2") }}</span>{{
+                $t("footer.title.part3") }}</h1>
+            <p>{{ $t("footer.text.part1") }}<span class="select">{{ $t("footer.text.part2") }}</span>{{
+                $t("footer.text.part3") }}</p>
         </div>
 
         <div class="social">
