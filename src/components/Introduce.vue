@@ -2,19 +2,17 @@
     <div class="conteiner">
         <div class="content">
 
-            <h1 class="header">LET ME <span class="introduce">INTRODUCE</span> MYSELF</h1>
-            <p>I’m a Software Engineer who loves transforming ideas into reliable, scalable products. Over time, I’ve
-                explored several technologies and found my passion in building high-performance systems and intuitive
-                user
-                experiences.</p>
+            <h1 class="header">{{ $t("introduce.title.part1") }}<span class="introduce">{{ $t("introduce.title.part2")
+                    }}</span>{{ $t("introduce.title.part3") }}</h1>
+            <p>{{ $t("introduce.text.part1") }}</p>
 
-            <p>I’m proficient in <span class="introduce">JavaScript, C++, Node.js, and Python</span> — and I enjoy
-                working
-                across both backend and
-                frontend stacks.</p>
+            <p>{{ $t("introduce.text.part2.part1") }}<span class="introduce">JavaScript, C++, Node.js, {{
+                $t("introduce.text.part2.and") }} Python</span>
+                {{ $t("introduce.text.part2.part2") }}</p>
 
-            <p>Whenever possible, I love building projects with <span class="introduce">Node.js</span> and modern
-                frameworks like <span class="introduce">Vue</span> and othen.
+            <p>{{ $t("introduce.text.part3.part1") }}<span class="introduce">Node.js</span>{{
+                $t("introduce.text.part3.part2") }}<span class="introduce">Vue</span>{{ $t("introduce.text.part3.part3")
+                }}
             </p>
 
         </div>

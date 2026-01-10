@@ -1,23 +1,49 @@
 <template>
     <div class="conteiner">
         <div class="menu">
-            <p @click="$router.push('/')" class="btn" :class="{ active: $route.path === '/' }">Home</p>
-            <p @click="$router.push('/about')" class="btn" :class="{ active: $route.path === '/about' }">About</p>
-            <p @click="$router.push('/projects')" class="btn" :class="{ active: $route.path === '/projects' }">Projects
+            <p @click="$router.push('/')" class="btn" :class="{ active: $route.path === '/' }">
+                {{ $t('menu.home') }}
             </p>
-            <p @click="$router.push('/contact')" class="btn" :class="{ active: $route.path === '/contact' }">Contact</p>
+            <p @click="$router.push('/about')" class="btn" :class="{ active: $route.path === '/about' }">
+                {{ $t('menu.about') }}
+            </p>
+            <p @click="$router.push('/projects')" class="btn" :class="{ active: $route.path === '/projects' }">
+                {{ $t('menu.projects') }}
+            </p>
+            <p @click="$router.push('/contact')" class="btn" :class="{ active: $route.path === '/contact' }">
+                {{ $t('menu.contact') }}
+            </p>
+        </div>
+
+        <!-- Перемикач мови -->
+        <div class="lang-switch">
+            <span :class="{ activeLang: currentLang === 'en' }" @click="setLang('en')">EN</span>
+            |
+            <span :class="{ activeLang: currentLang === 'ua' }" @click="setLang('ua')">UA</span>
         </div>
     </div>
-
 </template>
+
+
 <script>
 export default {
     name: "Header",
 
-}
+    computed: {
+        currentLang() {
+            return this.$i18n.locale;
+        }
+    },
 
-
+    methods: {
+        setLang(lang) {
+            this.$i18n.locale = lang;
+            localStorage.setItem("lang", lang);
+        }
+    }
+};
 </script>
+
 <style scoped>
 .conteiner {
     position: sticky;
@@ -29,6 +55,10 @@ export default {
     -webkit-backdrop-filter: blur(10px);
     z-index: 999;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
 }
 
 .menu {
@@ -74,5 +104,29 @@ export default {
 
 .active::after {
     width: 100%;
+}
+
+
+
+.lang-switch {
+    position: absolute;
+    right: 30px;
+    color: aqua;
+    cursor: pointer;
+    user-select: none;
+}
+
+.lang-switch span {
+    opacity: 0.8;
+    transition: 0.2s;
+}
+
+.lang-switch span:hover {
+    opacity: 1;
+}
+
+.activeLang {
+    opacity: 1;
+    text-decoration: underline;
 }
 </style>

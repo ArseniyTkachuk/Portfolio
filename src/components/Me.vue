@@ -6,11 +6,11 @@
             <img src="@/assets/photo/image.png" class="avatar">
         </div>
 
-        <h1 class="name">Arsenii Tkachuk</h1>
+        <h1 class="name">{{ $t("me.fullName") }}</h1>
 
         <h1 class="hero-text">{{ displayText }}|</h1>
 
-        <button @click="$router.push('/contact')" class="btn_talk">Let's Talk</button>
+        <button @click="$router.push('/contact')" class="btn_talk">{{ $t("me.talk") }}</button>
     </div>
 
 </template>
@@ -20,64 +20,88 @@ export default {
 
     data() {
         return {
-            texts: [
-                "Unity game developer",
-                "Website developer",
-                "Open Source Contributor",
-                "Software Developer"
-            ],
             displayText: "",
             textIndex: 0,
             charIndex: 0,
             typing: true,
             typeSpeed: 100,
             eraseSpeed: 50,
-            delayBetween: 1500
-        }
+            delayBetween: 1500,
+            timeoutId: null,
+        };
     },
+
+    computed: {
+        texts() {
+            return [
+                this.$t("me.displayText.txt1"),
+                this.$t("me.displayText.txt2"),
+                this.$t("me.displayText.txt3"),
+                this.$t("me.displayText.txt4"),
+            ];
+        },
+    },
+
+    watch: {
+        // слідкуємо за зміною мови
+        "$i18n.locale"() {
+            this.resetTyping();
+        },
+    },
+
     mounted() {
-        const glow = document.getElementById("cursor-glow")
+        const glow = document.getElementById("cursor-glow");
 
         window.addEventListener("mousemove", (e) => {
-            glow.style.left = e.clientX + "px"
-            glow.style.top = e.clientY + "px"
-        })
+            glow.style.left = e.clientX + "px";
+            glow.style.top = e.clientY + "px";
+        });
 
         this.type();
     },
 
+    beforeUnmount() {
+        clearTimeout(this.timeoutId);
+    },
+
     methods: {
+        resetTyping() {
+            clearTimeout(this.timeoutId);
+            this.displayText = "";
+            this.textIndex = 0;
+            this.charIndex = 0;
+            this.typing = true;
+            this.type();
+        },
+
         type() {
+            const currentText = this.texts[this.textIndex];
+
             if (this.typing) {
-                // додаємо букву
-                this.displayText += this.texts[this.textIndex][this.charIndex];
+                this.displayText += currentText[this.charIndex] || "";
                 this.charIndex++;
 
-                if (this.charIndex < this.texts[this.textIndex].length) {
-                    setTimeout(this.type, this.typeSpeed);
+                if (this.charIndex < currentText.length) {
+                    this.timeoutId = setTimeout(this.type, this.typeSpeed);
                 } else {
-                    // досягли кінця тексту, пауза перед видаленням
                     this.typing = false;
-                    setTimeout(this.type, this.delayBetween);
+                    this.timeoutId = setTimeout(this.type, this.delayBetween);
                 }
             } else {
-                // видаляємо букву
                 this.displayText = this.displayText.slice(0, -1);
 
                 if (this.displayText.length > 0) {
-                    setTimeout(this.type, this.eraseSpeed);
+                    this.timeoutId = setTimeout(this.type, this.eraseSpeed);
                 } else {
-                    // перемикаємося на наступний текст
                     this.textIndex = (this.textIndex + 1) % this.texts.length;
                     this.charIndex = 0;
                     this.typing = true;
-                    setTimeout(this.type, this.typeSpeed);
+                    this.timeoutId = setTimeout(this.type, this.typeSpeed);
                 }
             }
-        }
-    }
-}
-
+        },
+    },
+};
 </script>
 
 <style scoped>
