@@ -9,11 +9,13 @@
         </p>
 
         <div class="contact-wrapper">
+
+
             <!-- FORM -->
             <form class="contact-form" @submit.prevent="submitForm">
-                <input type="text" :placeholder="`${$t('contact.placeholder.name')}`" required />
-                <input type="email" :placeholder="`${$t('contact.placeholder.email')}`" required />
-                <textarea rows="5" :placeholder="`${$t('contact.placeholder.message')}`" required></textarea>
+                <p class="anonymous-note">{{ $t('contact.anonymous_note') }}</p>
+                <textarea rows="5" v-model="form.message" :placeholder="`${$t('contact.placeholder.message')}`"
+                    required></textarea>
 
                 <button type="submit">{{ $t('contact.btn_send') }}</button>
             </form>
@@ -46,14 +48,44 @@
 </template>
 
 <script>
+import emailjs from '@emailjs/browser';
+
 export default {
     name: 'Contact',
+    data() {
+        return {
+            form: {
+                message: '',
+            },
+        };
+    },
     methods: {
         submitForm() {
-            alert('Message sent! (demo)')
+
+            // Параметри для EmailJS (тільки повідомлення)
+            const templateParams = {
+                message: this.form.message
+            };
+
+            emailjs.send(
+                'service_rashamon2009',   // заміни на свій Service ID
+                'template_abbfvkc',  // заміни на свій Template ID
+                templateParams,
+                'GRWjh_f2prVuQ8Npy'    // заміни на свій Public Key
+            )
+                .then(
+                    () => {
+                        alert('Повідомлення надіслано ✅');
+                        this.form.message = ''; // очищаємо поле
+                    },
+                    (error) => {
+                        alert('Помилка ❌: ' + error.text);
+                    }
+                );
         },
     },
-}
+};
+
 </script>
 
 <style scoped>
@@ -86,6 +118,22 @@ export default {
     max-width: 1000px;
     margin: 0 auto;
 }
+
+.anonymous-note {
+    color: #08fdd8;
+    /* акцентний колір */
+    font-size: 18px;
+    /* трохи більший шрифт */
+    font-weight: 600;
+    /* напівжирний */
+    margin-bottom: 25px;
+    /* відстань до форми */
+    text-align: center;
+    /* по центру */
+    letter-spacing: 0.5px;
+    /* трішки розширити літери */
+}
+
 
 /* form */
 .contact-form {

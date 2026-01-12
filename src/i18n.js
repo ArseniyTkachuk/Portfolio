@@ -75,11 +75,10 @@ const messages = {
             },
             description: 'Feel free to contact me for collaboration, questions, or just to say hello.',
             placeholder: {
-                name: 'Your Name',
-                email: 'Your Email',
                 message: 'Your Message',
             },
             btn_send: 'Send Message',
+            anonymous_note: "Send me an anonymous message"
         },
     },
     ua: {
@@ -159,11 +158,10 @@ const messages = {
             description:
                 'Не соромтеся звертатися до мене для співпраці, питань або просто щоб привітатися.',
             placeholder: {
-                name: "Ваше Ім'я",
-                email: 'Ваш Email',
                 message: 'Ваше повідомлення',
             },
             btn_send: 'Надіслати Повідомлення',
+            anonymous_note: "Надіслати мені анонімне повідомлення"
         },
     },
 }
